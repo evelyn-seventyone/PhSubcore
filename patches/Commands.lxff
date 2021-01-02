@@ -1,0 +1,12 @@
+as 'Commands.lxff' + LXFF + LXFFCommonAPI + LXFF2MC;
+def [as 'Commands.lxff']:[m_commands]
+
+[LXFF2MC.%script%]:
+
+def [mc.cmd.version]:[defTypeAlias'icanhasbukkit'+'about'+'ver'+'bukkit:about'+'bukkit:version'+'bukkit:ver']
+[as >playerInteract(sendChat'version' + %mc.cmd.version%);]
+[out >playerPing(receiveChat'This server is running PhSubcore %PROJECT_VERSION% based on CocaineX %SOURCE_VERSION% for MC %MC_VERSION%')]
+
+def [mc.cmd.plugins]:[defTypeAlias'plugins'+'pl'+'bukkit:plugins'+'bukkit:pl']
+[as >playerInteract(sendChat'plugins' + %mc.cmd.plugins%);]
+[out >playerPing(receiveChat'Plugins (%TOTAL_PLUGIN_COUNT%): %PLUGIN_LIST%' + '%PLUGIN_LIST_DEACTIVATED%')]

@@ -1,0 +1,4 @@
+as 'CraftServer.lxff' + LXFF + LXFFCommonAPI;
+def [as 'CraftServer.lxff']:[main]
+$act.onRun [%main% >punch[.. + /'patches']  **]
+[LXFF.%patchJar%]
